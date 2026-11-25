@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Перемикач теми -->
+        <button id="theme-toggle">Змінити тему</button>
+    </header>
+
+    <main>
+        <h2>Коментарі роботодавців</h2>
+        <!-- Контейнер для динамічного вмісту[cite: 1] -->
+        <div id="comments-container"></div>
+    </main>
+
+    <!-- Модальне вікно форми[cite: 1, 2] -->
+    <div id="feedback-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">×</span>
+            <h2>Зворотний зв'язок</h2>
+            <!-- Заміни YOUR_ENDPOINT на свій з Formspree -->
+            <form action="https://formspree.io/f/myewyjbl" method="POST">
+                <input type="text" name="name" placeholder="І'мя" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Номер телефону" required>
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Відображення даних з localStorage[cite: 1] -->
+        <div id="system-info"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
